@@ -1,0 +1,73 @@
+{
+    "name": "pipeline-application-copilot-application-copilot-dev-BuildProject",
+    "arn": "arn:aws:codebuild:us-west-2:596912130800:build/pipeline-application-copilot-application-copilot-dev-BuildProject",
+    "description": "Build for pipeline-application-copilot-application-copilot-dev",
+    "source": {
+        "type": "CODEPIPELINE",
+        "buildspec": "copilot/pipelines/application-copilot-dev/buildspec.yml",
+        "insecureSsl": false
+    },
+    "artifacts": {
+        "type": "CODEPIPELINE",
+        "name": "pipeline-application-copilot-application-copilot-dev-BuildProject",
+        "packaging": "NONE",
+        "encryptionDisabled": false
+    },
+    "cache": {
+        "type": "LOCAL",
+        "modes": [
+            "LOCAL_DOCKER_LAYER_CACHE"
+        ]
+    },
+    "environment": {
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/amazonlinux2-x86_64-standard:4.0",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+            {
+                "name": "AWS_ACCOUNT_ID",
+                "value": "596912130800",
+                "type": "PLAINTEXT"
+            },
+            {
+                "name": "PARTITION",
+                "value": "aws",
+                "type": "PLAINTEXT"
+            }
+        ],
+        "privilegedMode": true,
+        "imagePullCredentialsType": "CODEBUILD"
+    },
+    "serviceRole": "arn:aws:iam::596912130800:role/pipeline-application-copilot-appli-BuildProjectRole-u0Zch9i4o1Y9",
+    "timeoutInMinutes": 60,
+    "queuedTimeoutInMinutes": 480,
+    "encryptionKey": "arn:aws:kms:us-west-2:596912130800:key/a3ba710f-026a-4d97-ae61-52725e901e17",
+    "tags": [
+        {
+            "key": "copilot-pipeline",
+            "value": "application-copilot"
+        },
+        {
+            "key": "aws:cloudformation:stack-name",
+            "value": "pipeline-application-copilot-application-copilot-dev"
+        },
+        {
+            "key": "aws:cloudformation:logical-id",
+            "value": "BuildProject"
+        },
+        {
+            "key": "copilot-application",
+            "value": "application-copilot"
+        },
+        {
+            "key": "aws:cloudformation:stack-id",
+            "value": "arn:aws:cloudformation:us-west-2:596912130800:stack/application-copilot-dev/5d56f6c0-2880-11ef-8778-0a39da3a90a1"
+        }
+    ],
+    "created": "2024-06-12 12:55:26 UTC+0700",
+    "lastModified": "2024-06-12 13:00:24 UTC+0700",
+    "badge": {
+        "badgeEnabled": false
+    },
+    "projectVisibility": "PRIVATE"
+}
