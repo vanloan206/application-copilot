@@ -12,9 +12,9 @@ phases:
     commands:
       - echo "Run your tests"
       # - make test
-  post_build:
-    commands:
-      - ls -l
+  # post_build:
+  #   commands:
+  #     - ls -l
       # - export COLOR="false"
       # - export CI="true"
       # - pipeline=$(cat $CODEBUILD_SRC_DIR/copilot/pipelines/application-copilot-dev/manifest.yml | ruby -ryaml -rjson -e 'puts JSON.pretty_generate(YAML.load(ARGF))')
@@ -62,11 +62,11 @@ phases:
       #     fi
       #     done;
       #   done;
-      - ls -lah ./infrastructure
-      - cat ./infrastructure/rest-api-service-dev.params.json
-      - cat ./infrastructure/rest-api-service-dev.stack.yml
-      - cat ./infrastructure/rest-api-service.addons.stack.yml
+#       - ls -lah ./infrastructure
+#       - cat ./infrastructure/rest-api-service-dev.params.json
+#       - cat ./infrastructure/rest-api-service-dev.stack.yml
+#       - cat ./infrastructure/rest-api-service.addons.stack.yml
 
-artifacts:
-  files:
-    - "infrastructure/*"
+# artifacts:
+#   files:
+#     - "infrastructure/*"

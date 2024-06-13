@@ -41,7 +41,7 @@ Resources:
           - Sid: DDBActions
             Effect: Allow
             Action:
-              - dynamodb:BatchGet*
+              # - dynamodb:BatchGet*
               - dynamodb:DescribeStream
               - dynamodb:DescribeTable
               - dynamodb:Get*
