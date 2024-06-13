@@ -63,6 +63,9 @@ phases:
           done;
         done;
       - ls -lah ./infrastructure
+      - cat ./infrastructure/rest-api-service-dev.params.json
+      - cat ./infrastructure/rest-api-service-dev.stack.yml
+      - cat ./infrastructure/rest-api-service.addons.stack.yml
 
 artifacts:
   files:
