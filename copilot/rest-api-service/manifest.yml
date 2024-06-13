@@ -14,7 +14,7 @@ http:
   # You can specify a custom health check path. The default is "/".
   healthcheck:
     path: /
-    success_codes: '200,301,302'
+    success_codes: '200,301,302,400,419,499'
 
 # Configuration for your containers and service.
 image:
